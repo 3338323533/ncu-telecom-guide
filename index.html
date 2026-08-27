@@ -438,7 +438,19 @@ body{
   .plan-features{grid-template-columns:1fr}
   .info-grid{grid-template-columns:1fr}
 }
-/* Partner banner */
+.promo-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.promo-cell{margin-bottom:0!important;height:100%}
+.promo-row .gift-banner{padding:20px 18px}
+.promo-row .gift-banner-value{font-size:38px}
+.promo-row .gift-banner-title{font-size:16px}
+.promo-row .gift-banner-sub{font-size:12px}
+.promo-row .partner-banner-content{padding:20px 18px}
+.promo-row .partner-title{font-size:18px}
+.promo-row .partner-highlight{font-size:24px}
+.promo-row .partner-sub{font-size:12px}
+.promo-row .partner-tags{margin-bottom:8px}
+.promo-row .partner-tag{font-size:11px;padding:2px 8px}
+@media(max-width:600px){.promo-row{grid-template-columns:1fr}}/* Partner banner */
 .partner-banner{position:relative;border-radius:16px;overflow:hidden;margin-bottom:16px;cursor:pointer;background:linear-gradient(135deg,#1a237e 0%,#283593 40%,#c62828 100%);box-shadow:0 8px 24px rgba(26,35,126,0.3);transition:transform .2s}
 .partner-banner:active{transform:scale(0.98)}
 .partner-banner-bg{position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:120px;opacity:.15}
@@ -716,23 +728,25 @@ body{
       <h2>电信用户专属福利</h2>
     </div>
 
-    <div class="partner-banner" onclick="openModal('modal-driving')">
-      <div class="partner-banner-bg">🚗</div>
-      <div class="partner-banner-content">
-        <div class="partner-tags">
-          <span class="partner-tag">中国电信 × 南昌大学星光驾校</span>
-          <span class="partner-tag partner-tag-hot">联合福利</span>
-        </div>
-        <div class="partner-title">电信用户报名 <span class="partner-highlight">直减¥200</span></div>
-        <div class="partner-sub">校内驾校 · 灵活练车 · 耐心教练 · 免费试学</div>
-        <div class="partner-cta">点击查看驾校详情 ›</div>
+    <div class="promo-row">
+      <div class="gift-banner promo-cell">
+        <span class="gift-banner-label">🔥 开学季限时福利</span>
+        <div class="gift-banner-value"><span class="yuan">¥</span>999<span class="gift-banner-unit">元</span></div>
+        <div class="gift-banner-title">开卡即送开学大礼包</div>
+        <div class="gift-banner-sub">吃喝玩乐一条龙 · 新用户人手一份 · 还能抽大奖</div>
       </div>
-    </div>
-    <div class="gift-banner">
-      <span class="gift-banner-label">🔥 开学季限时福利</span>
-      <div class="gift-banner-value"><span class="yuan">¥</span>999<span class="gift-banner-unit">元</span></div>
-      <div class="gift-banner-title">开卡即送开学大礼包</div>
-      <div class="gift-banner-sub">吃喝玩乐一条龙 · 新用户人手一份 · 还能抽大奖</div>
+      <div class="partner-banner promo-cell" onclick="openModal('modal-driving')">
+        <div class="partner-banner-bg">🚗</div>
+        <div class="partner-banner-content">
+          <div class="partner-tags">
+            <span class="partner-tag">中国电信 × 星光驾校</span>
+            <span class="partner-tag partner-tag-hot">联合福利</span>
+          </div>
+          <div class="partner-title">电信用户报名 <span class="partner-highlight">直减¥200</span></div>
+          <div class="partner-sub">校内驾校 · 灵活练车 · 耐心教练 · 免费试学</div>
+          <div class="partner-cta">点击查看驾校详情 ›</div>
+        </div>
+      </div>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-bottom:14px">点击卡片查看福利详情和领取方式 👇</p>
     <div class="walkin-banner">
