@@ -438,7 +438,26 @@ body{
   .plan-features{grid-template-columns:1fr}
   .info-grid{grid-template-columns:1fr}
 }
-</style>
+/* Partner banner */
+.partner-banner{position:relative;border-radius:16px;overflow:hidden;margin-bottom:16px;cursor:pointer;background:linear-gradient(135deg,#1a237e 0%,#283593 40%,#c62828 100%);box-shadow:0 8px 24px rgba(26,35,126,0.3);transition:transform .2s}
+.partner-banner:active{transform:scale(0.98)}
+.partner-banner-bg{position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:120px;opacity:.15}
+.partner-banner-content{position:relative;padding:22px 24px;z-index:1}
+.partner-tags{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.partner-tag{display:inline-block;background:rgba(255,255,255,0.2);color:#fff;font-size:12px;padding:3px 10px;border-radius:20px}
+.partner-tag-hot{background:#ffd700;color:#c62828;font-weight:700}
+.partner-title{color:#fff;font-size:24px;font-weight:800;margin-bottom:6px;letter-spacing:1px}
+.partner-highlight{color:#ffd700;font-size:30px}
+.partner-sub{color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:12px}
+.partner-cta{display:inline-block;background:#ffd700;color:#c62828;font-size:14px;font-weight:700;padding:8px 20px;border-radius:20px}
+.modal-hero.driving{background:linear-gradient(145deg,#1a237e,#283593 55%,#c62828)}
+.tag-driving{background:#e8eaf6;color:#283593}
+.driving-grid{display:grid;gap:12px;margin-bottom:16px}
+.driving-item{display:flex;gap:12px;background:#f8f9ff;border-radius:12px;padding:14px}
+.driving-icon{font-size:28px;flex-shrink:0;width:40px;text-align:center}
+.driving-name{font-size:15px;font-weight:700;color:#333;margin-bottom:4px}
+.driving-desc{font-size:13px;color:#666;line-height:1.6}
+@media(max-width:360px){.partner-title{font-size:20px}.partner-highlight{font-size:24px}}</style>
 </head>
 <body>
 <div class="app-shell">
@@ -678,145 +697,25 @@ body{
     </div>
   </section>
 
-  <!-- ===== SECTION 3: 校园网自助绑定教程 ===== -->
-  <section class="section" id="tutorial">
-    <div class="section-head">
-      <div class="section-num">03</div>
-      <h2>校园网自助绑定教程</h2>
-    </div>
-
-    <div style="background:linear-gradient(135deg,#e8f4fd,#f0f7ff);border-radius:14px;padding:20px;margin-bottom:16px;border-left:4px solid #1a73e8">
-      <p style="font-size:14px;color:#333;line-height:1.8;margin:0">
-        学校现已新增<strong>学生宽带账号自助绑定入口</strong>，学生可通过该入口自行完成校园网账号与运营商宽带账号的绑定。运营商原有的账号绑定权限仍正常保留，不受此次新增自助绑定功能影响。
-      </p>
-    </div>
-
-    <div style="background:#fff8e1;border-radius:14px;padding:16px 20px;margin-bottom:20px;border-left:4px solid #ffa000;display:flex;gap:10px;align-items:flex-start">
-      <span style="font-size:20px">⚠️</span>
-      <p style="font-size:13px;color:#795548;line-height:1.7;margin:0">
-        <strong>注意：</strong>该自助绑定入口<strong>无法通过公网直接访问</strong>，仅支持通过<strong>校内网络</strong>访问。请连接校园网后扫码操作。
-      </p>
-    </div>
-
-    <p style="font-size:14px;color:#666;margin-bottom:16px">扫描下方二维码查看对应教程文档 👇</p>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px">
-      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
-        <img src="images/tutorial-bind.jpg" alt="宿舍校园网绑定宽带操作手册" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
-        <div style="font-size:13px;font-weight:600;color:#333">绑定宽带操作手册</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
-        <img src="images/tutorial-ncuwlan.jpg" alt="NCUWLAN使用教程" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
-        <div style="font-size:13px;font-weight:600;color:#333">NCUWLAN 使用教程</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
-        <img src="images/tutorial-auth.jpg" alt="学生宿舍区上网认证教程" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
-        <div style="font-size:13px;font-weight:600;color:#333">宿舍区上网认证教程</div>
-      </div>
-    </div>
-
-    <div style="background:#f5f7fa;border-radius:14px;padding:16px 20px;font-size:13px;color:#666;line-height:1.8">
-      <strong style="color:#333">💡 遇到问题？</strong><br/>
-      如在自助绑定过程中出现绑定失败、账号信息异常、宽带产品无法识别或其他相关问题，请联系营业厅协助核实处理。可添加售后微信或加入售后QQ群获取支持。
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section class="section" id="faq">
-    <div class="section-head">
-      <div class="section-num">04</div>
-      <h2>常见问题处理</h2>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>新卡激活后没有信号怎么办？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        请按以下步骤排查：①确认手机已插入新SIM卡并重启；②检查手机是否开启飞行模式后关闭；③进入设置→移动网络→网络模式，选择"4G/5G自动"；④如仍无信号，请携带手机和SIM卡到营业厅检测。也可拨打10000号查询卡片状态。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>流量没有到账怎么查？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        方式一：下载"电信营业厅"APP，首页即可查看流量和通话余量；方式二：发送短信"102"到10001查询套餐余量；方式三：拨打10000号按语音提示查询。新入网套餐流量一般在激活后2小时内到账，如超过24小时未到账请到厅查询。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>校园宽带连不上怎么排查？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        ①确认网线插好、WiFi已连接正确网络；②打开浏览器访问任意网页，会自动弹出认证页面，输入学号/工号和密码登录；③如未弹出认证页面，尝试访问 1.1.1.1 触发跳转；④检查账号是否欠费；⑤以上无效请到营业厅或联系企微售后群报修。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>校园网认证失败怎么办？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        确认输入的账号密码正确（通常为学号，初始密码为身份证后六位）。如提示"账号在线数超限"，请先在其他设备下线。如忘记密码，可到网信办重置，或联系营业厅协助处理。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>怎么改套餐或加流量包？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        合约期内可升档不可降档。改套餐需本人持身份证到营业厅办理。临时流量不够用可在电信APP购买流量加油包（10元/GB等），当月有效。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>手机丢了/SIM卡损坏怎么补卡？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        请立即拨打10000号挂失停机，防止话费损失。随后本人持身份证到营业厅办理补卡，补卡费10元。补卡后原号码和套餐不变，通讯录需提前备份。
-      </div>
-    </div>
-
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>其他运营商的号码能转电信吗？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        可以。携带本人身份证和原运营商手机卡到营业厅办理"携号转网"，无需更换号码即可使用电信校园套餐。办理前请确认原号码无在网合约约束、无欠费。
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span>宽带网速慢/频繁断网怎么办？</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a">
-        ①先重启路由器和光猫（断电30秒后重新通电）；②检查是否多人同时大流量下载占用带宽；③如用WiFi，尝试靠近路由器或改用网线直连；④仍有问题请在企微售后群报障，或到营业厅登记报修，工作人员会上门排查。
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 4: 电信用户福利 ===== -->
+  <!-- ===== SECTION 3: 电信用户福利 ===== -->
   <section class="section" id="benefits">
     <div class="section-head">
-      <div class="section-num">05</div>
+      <div class="section-num">03</div>
       <h2>电信用户专属福利</h2>
     </div>
 
+    <div class="partner-banner" onclick="openModal('modal-driving')">
+      <div class="partner-banner-bg">🚗</div>
+      <div class="partner-banner-content">
+        <div class="partner-tags">
+          <span class="partner-tag">中国电信 × 南昌大学星光驾校</span>
+          <span class="partner-tag partner-tag-hot">联合福利</span>
+        </div>
+        <div class="partner-title">电信用户报名 <span class="partner-highlight">直减¥200</span></div>
+        <div class="partner-sub">校内驾校 · 灵活练车 · 耐心教练 · 免费试学</div>
+        <div class="partner-cta">点击查看驾校详情 ›</div>
+      </div>
+    </div>
     <div class="gift-banner">
       <span class="gift-banner-label">🔥 开学季限时福利</span>
       <div class="gift-banner-value"><span class="yuan">¥</span>999<span class="gift-banner-unit">元</span></div>
@@ -972,6 +871,138 @@ body{
         </div>
       </div>
       <div class="lottery-note">* 开学季限时活动，到厅办理39元校园融合套餐即可参与，每人限抽一次，奖品现场领取，数量有限先到先得。</div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: 校园网自助绑定教程 ===== -->
+  <section class="section" id="tutorial">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <h2>校园网自助绑定教程</h2>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#e8f4fd,#f0f7ff);border-radius:14px;padding:20px;margin-bottom:16px;border-left:4px solid #1a73e8">
+      <p style="font-size:14px;color:#333;line-height:1.8;margin:0">
+        学校现已新增<strong>学生宽带账号自助绑定入口</strong>，学生可通过该入口自行完成校园网账号与运营商宽带账号的绑定。运营商原有的账号绑定权限仍正常保留，不受此次新增自助绑定功能影响。
+      </p>
+    </div>
+
+    <div style="background:#fff8e1;border-radius:14px;padding:16px 20px;margin-bottom:20px;border-left:4px solid #ffa000;display:flex;gap:10px;align-items:flex-start">
+      <span style="font-size:20px">⚠️</span>
+      <p style="font-size:13px;color:#795548;line-height:1.7;margin:0">
+        <strong>注意：</strong>该自助绑定入口<strong>无法通过公网直接访问</strong>，仅支持通过<strong>校内网络</strong>访问。请连接校园网后扫码操作。
+      </p>
+    </div>
+
+    <p style="font-size:14px;color:#666;margin-bottom:16px">扫描下方二维码查看对应教程文档 👇</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px">
+      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
+        <img src="images/tutorial-bind.jpg" alt="宿舍校园网绑定宽带操作手册" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
+        <div style="font-size:13px;font-weight:600;color:#333">绑定宽带操作手册</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
+        <img src="images/tutorial-ncuwlan.jpg" alt="NCUWLAN使用教程" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
+        <div style="font-size:13px;font-weight:600;color:#333">NCUWLAN 使用教程</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)">
+        <img src="images/tutorial-auth.jpg" alt="学生宿舍区上网认证教程" style="width:100%;border-radius:10px;margin-bottom:10px" loading="lazy">
+        <div style="font-size:13px;font-weight:600;color:#333">宿舍区上网认证教程</div>
+      </div>
+    </div>
+
+    <div style="background:#f5f7fa;border-radius:14px;padding:16px 20px;font-size:13px;color:#666;line-height:1.8">
+      <strong style="color:#333">💡 遇到问题？</strong><br/>
+      如在自助绑定过程中出现绑定失败、账号信息异常、宽带产品无法识别或其他相关问题，请联系营业厅协助核实处理。可添加售后微信或加入售后QQ群获取支持。
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <h2>常见问题处理</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>新卡激活后没有信号怎么办？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        请按以下步骤排查：①确认手机已插入新SIM卡并重启；②检查手机是否开启飞行模式后关闭；③进入设置→移动网络→网络模式，选择"4G/5G自动"；④如仍无信号，请携带手机和SIM卡到营业厅检测。也可拨打10000号查询卡片状态。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>流量没有到账怎么查？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        方式一：下载"电信营业厅"APP，首页即可查看流量和通话余量；方式二：发送短信"102"到10001查询套餐余量；方式三：拨打10000号按语音提示查询。新入网套餐流量一般在激活后2小时内到账，如超过24小时未到账请到厅查询。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>校园宽带连不上怎么排查？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        ①确认网线插好、WiFi已连接正确网络；②打开浏览器访问任意网页，会自动弹出认证页面，输入学号/工号和密码登录；③如未弹出认证页面，尝试访问 1.1.1.1 触发跳转；④检查账号是否欠费；⑤以上无效请到营业厅或联系企微售后群报修。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>校园网认证失败怎么办？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        确认输入的账号密码正确（通常为学号，初始密码为身份证后六位）。如提示"账号在线数超限"，请先在其他设备下线。如忘记密码，可到网信办重置，或联系营业厅协助处理。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>怎么改套餐或加流量包？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        合约期内可升档不可降档。改套餐需本人持身份证到营业厅办理。临时流量不够用可在电信APP购买流量加油包（10元/GB等），当月有效。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>手机丢了/SIM卡损坏怎么补卡？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        请立即拨打10000号挂失停机，防止话费损失。随后本人持身份证到营业厅办理补卡，补卡费10元。补卡后原号码和套餐不变，通讯录需提前备份。
+      </div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>其他运营商的号码能转电信吗？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        可以。携带本人身份证和原运营商手机卡到营业厅办理"携号转网"，无需更换号码即可使用电信校园套餐。办理前请确认原号码无在网合约约束、无欠费。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>宽带网速慢/频繁断网怎么办？</span>
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        ①先重启路由器和光猫（断电30秒后重新通电）；②检查是否多人同时大流量下载占用带宽；③如用WiFi，尝试靠近路由器或改用网线直连；④仍有问题请在企微售后群报障，或到营业厅登记报修，工作人员会上门排查。
+      </div>
     </div>
   </section>
 
@@ -1251,6 +1282,74 @@ body{
     </div>
   </div>
 
+  <!-- ===== MODAL: 星光驾校联合福利 ===== -->
+  <div class="modal-overlay" id="modal-driving" onclick="closeModalBg(event,'modal-driving')">
+    <div class="modal">
+      <div class="modal-hero driving">
+        <button class="modal-close" onclick="closeModal('modal-driving')">✕</button>
+        <div class="modal-hero-icon">🚗</div>
+      </div>
+      <div class="modal-body">
+        <span class="modal-tag tag-driving">🤝 电信专属联合福利</span>
+        <h3>中国电信 × 星光驾校</h3>
+        <p class="modal-subtitle">电信用户报名直减200元，校内学车更省心</p>
+
+        <div class="modal-section">
+          <div class="modal-section-title">💰 电信专属优惠</div>
+          <ul>
+            <li>电信用户凭手机号报名<strong>立减200元</strong></li>
+            <li>在校生专属团报优惠，报价透明清晰</li>
+            <li>杜绝中途乱收费，没有隐藏花销</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-title">⭐ 五大核心优势</div>
+        </div>
+        <div class="driving-grid">
+          <div class="driving-item">
+            <div class="driving-icon">🕐</div>
+            <div class="driving-info">
+              <div class="driving-name">练车灵活</div>
+              <div class="driving-desc">灵活预约，可安排单人练车时段，不用排队，贴合大学生课表，课余周末都能练</div>
+            </div>
+          </div>
+          <div class="driving-item">
+            <div class="driving-icon">💵</div>
+            <div class="driving-info">
+              <div class="driving-name">学费透明</div>
+              <div class="driving-desc">在校生专属团报优惠，报价清晰，杜绝中途乱收费，无隐藏花销</div>
+            </div>
+          </div>
+          <div class="driving-item">
+            <div class="driving-icon">📍</div>
+            <div class="driving-info">
+              <div class="driving-name">通勤省心</div>
+              <div class="driving-desc">就在南昌大学校内，往返省时省力；场地配有遮阳棚，雨天高温也不怕</div>
+            </div>
+          </div>
+          <div class="driving-item">
+            <div class="driving-icon">👨‍🏫</div>
+            <div class="driving-info">
+              <div class="driving-name">耐心教学</div>
+              <div class="driving-desc">资深教练徐祥文，经验充足，不吼学员，讲解通俗，针对薄弱点专项练习</div>
+            </div>
+          </div>
+          <div class="driving-item">
+            <div class="driving-icon">📋</div>
+            <div class="driving-info">
+              <div class="driving-name">考证保障</div>
+              <div class="driving-desc">熟悉南昌本地考场规则，针对性模拟训练，流程全程跟进，提升通过率</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-notice" style="background:#e8f5e9;border-left-color:#43a047;color:#2e7d32">
+          🎁 支持免费试学！先体验练车感受，满意再报名。报名请至电信营业厅咨询办理。
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ===== CTA ===== -->
   <section class="cta-section" id="contact">
     <div class="cta-card">
